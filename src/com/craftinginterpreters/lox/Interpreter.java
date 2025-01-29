@@ -40,6 +40,8 @@ class Interpreter implements Expr.Visitor<Object>,
       case MINUS:
         checkNumberOperand(expr.operator, right);
         return -(double)right;
+      default:
+        break;
     }
     // Unreachable.
     return null;
@@ -191,6 +193,8 @@ class Interpreter implements Expr.Visitor<Object>,
       return (double)left * (double)right;
     case BANG_EQUAL: return !isEqual(left, right);
     case EQUAL_EQUAL: return isEqual(left, right);
+      default:
+        break;
     }
     // Unreachable.
     return null;  
