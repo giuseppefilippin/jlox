@@ -1,6 +1,9 @@
 package com.craftinginterpreters.lox;
 
 import java.util.List;
+
+import com.craftinginterpreters.lox.Stmt.Return;
+
 import java.util.ArrayList;
 
 class Interpreter implements Expr.Visitor<Object>,
@@ -160,6 +163,13 @@ class Interpreter implements Expr.Visitor<Object>,
     Object value = evaluate(stmt.expression);
     System.out.println(stringify(value));
     return null;
+  }
+  @Override
+  public Void visitReturnStmt(Stmt.Return stmt) {
+    Object value = null;
+    if (stmt.value != null) value = evaluate(stmt.value);
+
+    throw new Return(value);
   }
   @Override
   public Void visitVarStmt(Stmt.Var stmt) {
