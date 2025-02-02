@@ -1,9 +1,6 @@
 package com.craftinginterpreters.lox;
 
 import java.util.List;
-
-import com.craftinginterpreters.lox.Stmt.Return;
-
 import java.util.ArrayList;
 
 class Interpreter implements Expr.Visitor<Object>,
