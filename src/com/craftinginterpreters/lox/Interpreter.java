@@ -123,7 +123,7 @@ class Interpreter implements Expr.Visitor<Object>,
   private void execute(Stmt stmt) {
     stmt.accept(this);
   }
-  private void resolve(Expr expr, int depth) { 
+  void resolve(Expr expr, int depth) { 
     locals.put(expr, depth);
   }
   void executeBlock(List<Stmt> statements,
