@@ -134,6 +134,11 @@ class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {
     return null;
   }
   @Override
+  public Void visitThisExpr(Expr.This expr) {
+    resolveLocal(expr, expr.keyword);
+    return null;
+  }
+  @Override
   public Void visitUnaryExpr(Expr.Unary expr) {
     resolve(expr.right);
     return null;
