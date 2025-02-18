@@ -35,7 +35,7 @@ Clone the repository:
 
 ```sh
 git clone https://github.com/giuseppefilippin/jlox.git
-cd lox-interpreter
+cd JLOX
 ```
 
 ### Running the Interpreter
