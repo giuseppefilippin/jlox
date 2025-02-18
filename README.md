@@ -111,14 +111,6 @@ if (3 > 2) {
 - **[Crafting Interpreters](https://craftinginterpreters.com/)** by Robert Nystrom
 - Java Official Documentation: [https://docs.oracle.com/en/java/](https://docs.oracle.com/en/java/)
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to fork and submit PRs.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## ⭐ Acknowledgments
 
 Special thanks to Robert Nystrom for writing *Crafting Interpreters* and making compiler construction more accessible!
